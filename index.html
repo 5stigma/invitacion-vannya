@@ -249,11 +249,75 @@ footer{padding:40px 24px;text-align:center;background:var(--white);border-top:1p
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 @media(max-width:640px){
-  .msg-inner,.det-inner{grid-template-columns:1fr}
-  .photo-msg,.photo-det{max-height:320px;aspect-ratio:4/3}
+
+  /* HERO */
+  .hero{padding:48px 20px 72px}
+  .hero-eyebrow{font-size:9px;letter-spacing:.3em;margin-bottom:14px}
+  .hero-date{font-size:12px;letter-spacing:.12em}
+
+  /* SOBRE — más pequeño y centrado */
+  .env-wrap{width:min(320px,86vw)}
+  .env-text p{font-size:15px}
+  .play-btn{width:54px;height:54px}
+  .play-btn svg{width:20px;height:20px}
+
+  /* MENSAJE ESPECIAL — foto arriba, texto abajo */
+  .msg-section{padding:48px 20px}
+  .msg-inner{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .msg-inner > div:first-child{order:2}
+  .photo-fade-wrap.photo-msg{order:1;aspect-ratio:4/3;max-height:260px}
+  .big-quote{font-size:56px}
+
+  /* SECCIONES GENERALES */
+  .sec-body{font-size:15px;line-height:1.8}
+
+  /* COUNTDOWN */
+  .cd-section{padding:40px 16px}
+  .cd-grid{gap:10px}
+  .cd-unit{min-width:68px;padding:14px 12px;border-radius:12px}
+  .cd-num{font-size:36px}
+  .cd-tag{font-size:8px}
+
+  /* DETALLES — foto oculta en móvil, solo cards */
+  .det-section{padding:48px 20px}
+  .det-inner{grid-template-columns:1fr;gap:0}
+  .photo-fade-wrap.photo-det{display:none}
+  .details-wrap{grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+  .d-card{padding:16px 12px;border-radius:12px}
+  .d-val{font-size:15px}
+
+  /* QUÉ LLEVAR */
+  .bring-card{padding:16px}
+  .bring-item{font-size:13px}
+
+  /* RSVP */
+  .rsvp-section{padding:48px 20px}
+  .rsvp-big{font-size:56px}
+  .rsvp-btn{padding:14px 32px;font-size:12px}
+
+  /* PLAYER FLOTANTE — más compacto y pegado al borde */
+  #audio-player{
+    bottom:16px;right:16px;
+    padding:10px 12px 10px;
+    min-width:140px;
+    border-radius:18px;
+  }
+  #ap-play-btn{width:34px;height:34px}
+  #ap-play-btn svg{width:15px;height:15px}
+
+  /* FOOTER */
+  footer{padding:28px 20px}
+}
+
+/* Pantallas muy pequeñas (iPhone SE, 375px) */
+@media(max-width:390px){
   .details-wrap{grid-template-columns:1fr 1fr}
-  .cd-num{font-size:34px}
-  .cd-unit{min-width:64px;padding:14px 16px}
+  .cd-unit{min-width:58px;padding:12px 8px}
+  .cd-num{font-size:30px}
+  .hero-num{-webkit-text-stroke:1.5px #f472b6}
 }
 </style>
 </head>
