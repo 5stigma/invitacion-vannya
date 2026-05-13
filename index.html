@@ -200,19 +200,19 @@ footer{padding:40px 24px;text-align:center;background:var(--white);border-top:1p
 
 /* ── FLOATING AUDIO PLAYER ── */
 #audio-player{
-  position:fixed;bottom:24px;right:24px;z-index:500;
-  display:none;flex-direction:column;align-items:center;gap:0;
+  position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:500;
+  display:none;flex-direction:row;align-items:center;gap:0;
   background:linear-gradient(145deg,rgba(255,245,253,.97),rgba(243,232,255,.97));
   border:1px solid rgba(244,114,182,.3);
-  border-radius:24px;
-  box-shadow:0 8px 32px rgba(196,91,252,.25);
-  padding:14px 16px 12px;
-  min-width:160px;
+  border-radius:100px;
+  box-shadow:0 4px 24px rgba(196,91,252,.22);
+  padding:8px 16px 8px 8px;
   backdrop-filter:blur(10px);
+  white-space:nowrap;
 }
 #audio-player.visible{display:flex}
-.ap-note{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);font-weight:300;margin-bottom:10px;text-align:center}
-.ap-controls{display:flex;align-items:center;gap:10px;width:100%}
+.ap-note{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);font-weight:300;margin-right:10px;margin-bottom:0}
+.ap-controls{display:flex;align-items:center;gap:10px}
 #ap-play-btn{
   width:40px;height:40px;border-radius:50%;flex-shrink:0;
   background:linear-gradient(135deg,var(--pink),var(--lilac));
@@ -298,15 +298,15 @@ footer{padding:40px 24px;text-align:center;background:var(--white);border-top:1p
   .rsvp-big{font-size:56px}
   .rsvp-btn{padding:14px 32px;font-size:12px}
 
-  /* PLAYER FLOTANTE — más compacto y pegado al borde */
+  /* PLAYER FLOTANTE — compacto en top center */
   #audio-player{
-    bottom:16px;right:16px;
-    padding:10px 12px 10px;
-    min-width:140px;
-    border-radius:18px;
+    top:12px;
+    padding:7px 14px 7px 7px;
+    border-radius:100px;
   }
-  #ap-play-btn{width:34px;height:34px}
-  #ap-play-btn svg{width:15px;height:15px}
+  #ap-play-btn{width:32px;height:32px}
+  #ap-play-btn svg{width:14px;height:14px}
+  #ap-volume{width:80px}
 
   /* FOOTER */
   footer{padding:28px 20px}
@@ -329,7 +329,6 @@ footer{padding:40px 24px;text-align:center;background:var(--white);border-top:1p
 
 <!-- Flotante de música (aparece tras abrir el sobre) -->
 <div id="audio-player">
-  <p class="ap-note">🎵 Música</p>
   <div class="ap-controls">
     <button id="ap-play-btn" aria-label="Play / Pausa">
       <svg id="ap-icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
