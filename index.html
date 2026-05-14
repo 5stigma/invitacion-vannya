@@ -281,10 +281,10 @@ footer{padding:40px 24px;text-align:center;background:var(--white);border-top:1p
   .cd-num{font-size:36px}
   .cd-tag{font-size:8px}
 
-  /* DETALLES — foto oculta en móvil, solo cards */
+  /* DETALLES — foto debajo de las cards en móvil */
   .det-section{padding:48px 20px}
-  .det-inner{grid-template-columns:1fr;gap:0}
-  .photo-fade-wrap.photo-det{display:none}
+  .det-inner{grid-template-columns:1fr;gap:24px}
+  .photo-fade-wrap.photo-det{display:block;aspect-ratio:4/3;max-height:260px}
   .details-wrap{grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
   .d-card{padding:16px 12px;border-radius:12px}
   .d-val{font-size:15px}
@@ -470,7 +470,10 @@ footer{padding:40px 24px;text-align:center;background:var(--white);border-top:1p
 <!-- RSVP -->
 <div class="rsvp-section reveal">
   <div class="rsvp-inner">
-    <div class="sec-label" style="justify-content:center;">Confirmación de asistencia</div>
+    <div class="sec-label" style="justify-content:center;">
+      <span style="flex:1;height:1px;background:linear-gradient(to left,var(--pink-mid),transparent);max-width:60px;display:block;"></span>
+      Confirmación de asistencia
+    </div>
     <div class="rsvp-big">RSVP</div>
     <p class="rsvp-until">Confirma antes del 18 de mayo</p>
 
